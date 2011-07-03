@@ -11,6 +11,11 @@ module SpreeFlexiVariants
         Rails.env.production? ? require(c) : load(c)
       end
 
+      AppConfiguration.class_eval do
+        preference :use_javascript_pricing_updates, :boolean, :default => true
+        preference :use_separate_customizations_page, :boolean, :default => false
+      end
+
       Spree::Config.set :use_javascript_pricing_updates => true
       Spree::Config.set :use_separate_customizations_page => false
 
