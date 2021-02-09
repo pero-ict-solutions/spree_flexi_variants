@@ -18,7 +18,7 @@ group :test do
   end
 
   gem 'spree', :git => 'git://github.com/spree/spree.git'
-  gem 'carrierwave'
+  gem 'carrierwave', '>= 1.3.2'
   gem 'rmagick'
   gem 'spree_flexi_variants', :git => 'git://github.com/jsqu99/spree_flexi_variants.git'
   gem 'sqlite3-ruby'
